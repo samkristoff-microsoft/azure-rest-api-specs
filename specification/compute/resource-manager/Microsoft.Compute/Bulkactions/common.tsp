@@ -116,6 +116,7 @@ model Placement {
  * Additional parameters for reimaging a virtual machine that does not use an ephemeral operating system disk.
  */
 #suppress "@azure-tools/typespec-azure-core/casing-style" "For backward compatibility with existing Compute contract naming"
+#suppress "@azure-tools/typespec-client-generator-core/csharp-use-standard-acronyms" "Name kept for backward compatibility"
 model OSProfileProvisioningData {
   /**
    * The password for the virtual machine administrator account. The password must be 8 to 123 characters long for Windows virtual machines or 6 to 72 characters long for Linux virtual machines. It must contain characters from at least three of these categories: lowercase letters, uppercase letters, digits, and special characters. The following values are not allowed: `abc@123`, `P@$$w0rd`, `P@ssw0rd`, `P@ssword123`, `Pa$$word`, `pass@word1`, `Password!`, `Password1`, `Password22`, and `iloveyou!`. This secret is accepted only in the request and is not returned in responses.
@@ -146,5 +147,6 @@ model VirtualMachineReimageParameters {
   /**
    * The operating system profile used when reimaging a non-ephemeral operating system disk.
    */
+  #suppress "@azure-tools/typespec-client-generator-core/csharp-use-standard-acronyms" "Name kept for backward compatibility"
   osProfile?: OSProfileProvisioningData;
 }
