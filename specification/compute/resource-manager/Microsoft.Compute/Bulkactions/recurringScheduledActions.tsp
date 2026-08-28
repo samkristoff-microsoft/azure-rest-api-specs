@@ -206,13 +206,13 @@ union RecurringScheduledActionsProvisioningState {
 @added(Versions.`2026-07-06-preview`)
 @doc("The preferences customers can select to optimize their requests to ScheduledActions")
 union OptimizationPreference {
-  @doc("Optimize while considering cost savings")
+  @doc("Prioritizes cost savings.")
   Cost: "Cost",
 
-  @doc("Optimize while considering availability of resources")
+  @doc("Prioritizes resource availability.")
   Availability: "Availability",
 
-  @doc("Optimize while considering a balance of cost and availability")
+  @doc("Balances cost savings and resource availability.")
   CostAvailabilityBalanced: "CostAvailabilityBalanced",
 
   string,
